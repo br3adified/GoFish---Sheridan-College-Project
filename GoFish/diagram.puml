@@ -1,0 +1,30 @@
+@startuml
+abstract class ca.sheridancollege.project.Card
+abstract class ca.sheridancollege.project.Game
+abstract class ca.sheridancollege.project.Player
+annotation java.lang.Override
+class ca.sheridancollege.project.Book
+class ca.sheridancollege.project.Deck
+class ca.sheridancollege.project.GoFishCard
+class ca.sheridancollege.project.GoFishGame
+class ca.sheridancollege.project.GoFishPlayer
+class ca.sheridancollege.project.GroupOfCards
+class java.util.ArrayList
+class java.util.Collections
+class java.util.Iterator
+class java.util.Scanner
+ca.sheridancollege.project.Card ..> java.lang.Override
+ca.sheridancollege.project.Game ..> java.util.ArrayList
+ca.sheridancollege.project.Player ..> java.util.ArrayList
+ca.sheridancollege.project.Player ..> java.util.Iterator
+ca.sheridancollege.project.Book ..> java.lang.Override
+ca.sheridancollege.project.Deck --|> ca.sheridancollege.project.GroupOfCards
+ca.sheridancollege.project.Deck ..> java.util.Collections
+ca.sheridancollege.project.GoFishCard --|> ca.sheridancollege.project.Card
+ca.sheridancollege.project.GoFishCard ..> java.lang.Override
+ca.sheridancollege.project.GoFishGame ..> java.util.ArrayList
+ca.sheridancollege.project.GoFishGame ..> java.util.Scanner
+ca.sheridancollege.project.GoFishPlayer --|> ca.sheridancollege.project.Player
+ca.sheridancollege.project.GroupOfCards ..> java.util.ArrayList
+ca.sheridancollege.project.GroupOfCards ..> java.util.Collections
+@enduml
